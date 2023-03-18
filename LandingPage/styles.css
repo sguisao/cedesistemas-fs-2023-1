@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Roboto:wght@300&display=swap');
+
+*, ::after, ::before {
+    box-sizing: border-box;/*Para que ningun elemento se salga de la caja*/
+}
+body{
+    margin:0;
+    padding: 0;
+    background: url("https://landing.zytheme.com/siena/assets/images/background/bg-1.png");
+    /*background-position: 0;*/
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    /*border: 1px solid red;*/
+}
+
+.container {
+    padding: 5px 70px;
+    margin: 2em;
+    /*border: 4px solid blue;*/
+}
+
+header {
+    display: flex; 
+    margin-bottom: 5em;
+  /*border: 4px solid purple;*/
+  /*background-color: aquamarine;*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+  /*border: 1px solid red;*/
+}
+
+
+nav {
+    flex: 1;
+    /*flex: 1; Quiere decir que esta utilizando todo el espacio*/
+   /* display: flex;
+    border: 1px solid green;
+    justify-content: flex-end; */   
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  /*border: 1px solid red;*/
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+  /*border: 1px solid orange;*/
+}
+
+nav a {
+    color: #6262a0;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav a:hover {
+    color: #664ffa;
+}
+
+h1 {
+    color: #6262a0;
+    font-size: 2.7em;
+    font-weight: 700;
+}
+
+p {
+    color: #ababc7;
+}
+
+
+.form-container {
+    color: #fff;
+    padding: 10px 40px;
+    -webkit-box-shadow: 2px 4px 4px 1px rgba(158,153,158,1);
+    -moz-box-shadow: 2px 4px 4px 1px rgba(158,153,158,1);
+    box-shadow: 2px 4px 4px 1px rgba(158,153,158,1);
+    border-radius: 4px; 
+    flex: 5;
+    flex-wrap: wrap;
+    margin-left: 15em;
+    margin-right: 1em;
+    align-content: end;
+    background-color: #fff;
+    
+  /*border: 1px solid #1df992;*/
+}
+
+.form-container h3{
+    color: #6262a0;
+    font-size: 1.5em;
+    text-align: center; 
+}
+
+.form-container p{
+    text-align: center;
+}
+
+.field-input {
+    margin-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.field-input input{
+    width: 100%;
+    background-color: #f7f6ff;
+    color: #222;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 0.9em;
+    outline: none;
+    padding: 6px 6px 6px 20px;
+    height: 42px;
+}
+
+.field-input label {
+    color: #664ffa;
+    font-size: 0.95em;
+    margin-bottom: 7px;
+    display: block;/*Comportamiento de bloque*/
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #664ffa;
+    border-radius: 6px;
+    color: #fff;
+    text-transform: uppercase;/*Pasarlo a mayuscula*/
+    padding: 15px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #3b1df9;
+}
+
+.container-flex {
+    display: flex;
+    padding: 100px 0;
+    justify-content: space-evenly;
+    margin-bottom: 8em;
+  /*border: 1px solid #3b1df9;*/
+}
+
+.div-flex{
+    display: flex;
+    padding-top: 120px;
+    display: block;
+    flex: 5; 
+    align-items: center;
+  /*border: 1px solid #f9b31d;*/
+}
+
+.container-s2{
+    padding-top: 15px;
+    display: flex;
+    flex: 1; 
+    text-align: center; 
+    justify-content: center;
+    line-height: 28px;
+    font-family: "Roboto", sans-serif;
+    color: #a0a0ba;
+    margin-left: 2em;
+    margin-right: 1em;
+    margin-bottom: 25em;
+    /*border: 8px solid rgba(61, 14, 144, 0.066);*/
+}
+
+.div-h2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 21px;
+    
+    line-height: 47px;
+    margin-bottom: 0;
+    color: #6262a0;
+  /*border: 1px solid rgb(255, 0, 183);
+    margin-bottom: 40em;*/
+}
+
+.img {    
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    /*border: 1px solid red;*/
+}
+
+h3 {
+   color: #6262a0;
+}
+
+
+
+
+
+
+
+
+.div-bloques{
+    display: flex;
+    display: block;
+    justify-content: center;
+    border: 8px solid rgb(255, 8, 0);
+
+    
+}
