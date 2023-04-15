@@ -18,7 +18,7 @@ export const App = () => {
     
     //Funciones -> inicial on para indicar que es un evento
     const onAddPet = () => {
-        alert('Agregar mascota arreglo')
+        //alert('Agregar mascota arreglo')
         const newPet = inputPet;
         //pets.push(newPet);-> error
         setPets([...pets, newPet]);
@@ -32,7 +32,7 @@ export const App = () => {
             <br /><br />
             <Button name="Descargar"/>
             <br /><br />
-            <input value={inputPet} onChange={onChangeInputPet} type="text" placeholder="Ingresar"></input>
+            <input value={inputPet} onChange={onChangeInputPet} type="text" placeholder="Ingresar nombre mascota"></input>
             <Button name="Agregar" onPress={onAddPet} />
             <ul>
                {
