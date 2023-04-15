@@ -4,7 +4,7 @@ import {LazyLoading} from '../Components/LazyLoading';
 
 const Home = React.lazy( () => import('../Pages/Home'));
 const WearDetail = React.lazy( () => import('../Pages/WearDetail'));
-const Singup = React.lazy( () => import('../Pages/Singup'));
+const SingUp = React.lazy( () => import('../Pages/SingUp'));
 const Login = React.lazy( () => import('../Pages/Login'));
 
 //Para probar la pagina cargando
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
     path:"/singup",
     element: (
       <Suspense fallback={<LazyLoading />}>
-        <Singup />
+        <SingUp />
       </Suspense>
     )
   }

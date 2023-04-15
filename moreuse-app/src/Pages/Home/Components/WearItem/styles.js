@@ -21,13 +21,12 @@ export const WearItemContainer = styled.div`
     background-color:#f2f2f2;
     cursor: pointer;
   }
-
 `;
 
 export const WearItemImage = styled.div`
   //border: 1px solid red;
   width: 100%;
-  height: 160;
+  height: 160px;
   display: flex;
   justify-content: center;
 

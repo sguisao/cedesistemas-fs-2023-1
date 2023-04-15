@@ -2,7 +2,7 @@ import {Page} from "../../Components/Page";
 import {Button} from "../../Components/Button";
 import {FormContainer,FormControl} from "../../globalStyles"
 
-export const Singup = () => {
+export const SingUp = () => {
 
   return (
     <Page title="Regístrarse">
@@ -35,4 +35,4 @@ export const Singup = () => {
   )
 }
 
-export default Singup;
+export default SingUp;
