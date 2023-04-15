@@ -1,14 +1,26 @@
 import React, {Suspense} from 'react';
 import {createBrowserRouter} from 'react-router-dom';
+import {LazyLoading} from '../Components/LazyLoading';
 
 const Home = React.lazy( () => import('../Pages/Home'));
 const WearDetail = React.lazy( () => import('../Pages/WearDetail'));
+const Singup = React.lazy( () => import('../Pages/Singup'));
+const Login = React.lazy( () => import('../Pages/Login'));
+
+//Para probar la pagina cargando
+/*const Login = React.lazy(() => import('../Pages/Login').then((module) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(module);
+    }, 10000)
+  })
+}));*/
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <Suspense fallback={<div>Cargando..</div>}>
+      <Suspense fallback={<LazyLoading />}>
         <Home />
       </Suspense>
     )
@@ -16,9 +28,27 @@ export const router = createBrowserRouter([
   {
     path:"/wear-detail",
     element: (
-    <Suspense fallback={<div>Cargando..</div>}>
-      <WearDetail />
-  </Suspense>
+      <Suspense fallback={<LazyLoading />}>
+        <WearDetail />
+      </Suspense>
+    )
+  }
+  ,
+  {
+    path:"/login",
+    element: (
+      <Suspense fallback={<LazyLoading />}>
+       <Login />
+      </Suspense>
+    )
+  }
+  ,
+  {
+    path:"/singup",
+    element: (
+      <Suspense fallback={<LazyLoading />}>
+        <Singup />
+      </Suspense>
     )
   }
 ])
