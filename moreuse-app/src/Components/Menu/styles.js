@@ -7,7 +7,7 @@ export const MenuContainer = styled.section`
   top:0;
   background-color: #2C2E83;
   height: 100%;
-  display: none;/*para mostrar el menú o ocultarlo, es temporal */
+  display: ${props => props.isShown ? 'block' : 'none'}; /*none; para mostrar el menú o ocultarlo, es temporal */
 `;
 
 export const MenuItemsWrapper = styled.ul`
