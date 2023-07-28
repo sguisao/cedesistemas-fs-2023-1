@@ -19,7 +19,7 @@ const UserSchema = new Schema(
     },
     isRemoved:{
       type: Boolean,
-      default: true
+      default: false
     }
   },
   {

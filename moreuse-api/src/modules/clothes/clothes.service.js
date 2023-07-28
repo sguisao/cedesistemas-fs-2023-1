@@ -36,7 +36,7 @@ const getAll = async (filter) => {
     if(filter.name) query.name = { $regex: filter.name, $options: "i" }
     if(filter.excludeSeller) query.sellerId = { $ne: filter.excludeSeller};
 
-    const clothes = await Clothe.find();
+    const clothes = await Clothe.find(query);
     return {
       clothes
     }
@@ -53,6 +53,17 @@ const getDetail = async (clotheId) => {
     const clothe = await Clothe.findById(clotheId);
     if (clothe) return clothe;
     throw errorHandler(dictErrors.CLOTHE_NOT_FOUND)
+  } catch (error) {
+    throw error.handled ? error : errorHandler(dictErrors.SERVER_ERROR);
+  }
+}
+
+const getMyStuff = async (idUser) => {
+  try {
+    const query = {
+      sellerId: idUser
+    }
+    return await Clothe.find(query);
   } catch (error) {
     throw error.handled ? error : errorHandler(dictErrors.SERVER_ERROR);
   }
@@ -76,6 +87,7 @@ const changeStatus = async (clotheId,statusId) => {
 module.exports = {
   add,
   getAll,
+  getMyStuff,
   getDetail,
   changeStatus
 }
