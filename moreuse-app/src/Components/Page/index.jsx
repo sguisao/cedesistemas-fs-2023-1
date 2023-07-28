@@ -4,10 +4,12 @@ import { Topbar } from "../Topbar"
 import { PageContainer,PageTitleContainer } from "./styles"
 import { useContext, useEffect } from "react"
 import { MenuContext } from "../../Contexts/MenuContext"
+import { UserContext } from "../../Contexts/UserContext"
 
 export const Page = (props) => {
 
   const {onCloseMenu} = useContext(MenuContext);
+  const { validateSession } = useContext(UserContext);
 
   const location = useLocation();
 
@@ -17,11 +19,12 @@ export const Page = (props) => {
   */
   useEffect (() =>{
     //console.log('location',location)
-    onCloseMenu();
+    hideMenu();
+    validateSession();
   },[])
 
   const hideMenu = () => {
-
+    onCloseMenu();
   }
 
   return(
